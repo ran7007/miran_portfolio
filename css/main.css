@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+body {line-height: 1.5; background: #FCF4E4; color: #023D5B; font-size: 1.5rem;}
+.inner {max-width: 1720px; padding: 0 20px; margin: 0 auto;}
+h2 {font-size: 2rem; padding-bottom: 80px;}
+
+#header {position: relative; z-index: 1;}
+#header .inner {padding: 50px 20px; display: flex; justify-content: space-between; align-items: center;}
+
+#header .ham {position: relative; cursor: pointer; width: 30px; height: 30px; background: transparent; font-size: 0;}
+#header .ham::before, #header .ham::after {content: ""; position: absolute; display: block; background: #023D5B; width: 100%; height: 2px;}
+#header .ham::before {bottom: 14px; left: 0;}
+#header .ham span {position: absolute; display: block; background: #023D5B; width: 100%; height: 2px; bottom: 6px; left: 0; }
+#header .ham::after {top: 5px; left: 0;}
+
+#header .ham.active ~ h1 { opacity: 0; pointer-events: none; transition: opacity 0.5s ease-in-out; }
+
+#header .ham.active::before {transform: translate(0,4.5px) rotate(45deg);}
+#header .ham.active::after {transform: translate(0,-4.5px) rotate(-45deg);}
+#header .ham.active span {opacity: 0;}
+
+/* .main {display: block;}
+.main video{width: 100%; height: 100%; position: relative; top: -150px; z-index: 0;} */
+
+.About {position: relative; padding-bottom: 100px;}
+
+.About .inner > p {line-height: 1.6; }
+
+.About .inner .keyword {display: flex; position: relative; justify-content: flex-end; gap: 10px; bottom: 95px;}
+
+.Program {padding: 150px 0; background: #023D5B; color: #FCF4E4;}
+.Program h2{padding-bottom: 120px;}
+.Program .content {display: flex; gap: 250px; align-items: center;}
+.Program .content img {width: 100%; display: block;}
+.Program  .content .skiils > div {padding-bottom: 120px;}
+.Program  .content .skiils .sk_top, .Program  .content .skiils .sk_bottom {display: flex;}
+.Program  .content .skiils .sk_top {padding-top: 31px;  gap: 50px;}
+.Program  .content .skiils .sk_bottom  {padding-top: 20px;}
+
+.Program  .content .skiils h3 {font-size: 2rem; position: relative;}
+.Program  .content .skiils h3::before {content: ""; background: #FCF4E4; width: 120%; height: 1px; display: block; margin-bottom: 10px; position: absolute; right: -14%; top: -10px;}
+.Program  .content .skiils h3::after {content: ""; background: #FCF4E4; width: 120%; height: 1px; display: block; margin-bottom: 10px; position: absolute; right: -14%; bottom: -19px;}
+.Program  .content .skiils .left { background: #FCF4E4; width: 1px; height: 240%; left: -3%; top: 50%; transform: translateY(-50%); position: absolute;}
+
+.Program  .content .skiils .design .sk_bottom p:nth-of-type(2) {padding-left: 40px;}
+.Program  .content .skiils .design .sk_bottom p:nth-of-type(3) {padding-left: 85px;} 
+.Program  .content .skiils .design .sk_bottom p:nth-of-type(4) {padding-left: 75px;} 
+.Program  .content .skiils .office .sk_bottom p:nth-of-type(2) {padding-left: 90px;}
+
+.Profile {padding:150px 0; position: relative; background: ;}
+.Profile h2 {padding-bottom: 0;}
+.Profile .img {display: block; text-align: center; padding-bottom: 30px;}
+.Profile .img img {width: 100%; max-width: 1200px;}
+.Profile .profile_text {display: flex; align-items: center; justify-content: center; gap: 100px; position: relative; padding-top: 50px;}
+.Profile .profile_text::before {content: ""; position: absolute; width: 70%; height: 1px; background: #023D5B; top: 0;}
+.Profile .profile_text ul li {padding-bottom: 30px; position: relative; z-index: 99; display: block; }
+.Profile ul li {font-size: 1.8rem; z-index: 5;}
+.Profile ul li span{ font-weight: 700; font-size: 2rem; padding-right: 10px;}
+
+.Profile .pto_sec1 li:nth-child(1)::before {content: ""; position: absolute; background: #1f7faf; width: 15px; height: 15px; border-radius: 50%; left:24.5%; z-index: 0; display: block;}
